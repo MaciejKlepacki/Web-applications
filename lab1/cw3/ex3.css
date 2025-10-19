@@ -1,0 +1,37 @@
+.row {
+  display: flex;
+  gap: 10px; /* odstęp między kwadratami */
+  margin-bottom: 10px; /* odstęp między wierszami */
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+}
+
+.square1 {
+  background-color: red;
+}
+.square2 {
+  background-color: blue;
+}
+.square3 {
+  background-color: green;
+}
+.square4 {
+  background-color: orange;
+}
+.square5 {
+  background-color: purple;
+}
+
+/* jeden kwadrat zamieniamy na obrazek */
+.square3 {
+  background: none;
+}
+
+.square3 img {
+  width: 100px;
+  height: 100px;
+  display: block;
+}
