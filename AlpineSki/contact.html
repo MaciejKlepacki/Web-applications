@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Narciarstwo Alpejskie | Kontakt</title>
+    <meta name="description" content="Skontaktuj się z nami. Formularz kontaktowy dla miłośników narciarstwa.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><a href="index.html">AlpineSki</a></div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span>&#9776;</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Galeria</a></li>
+            <li><a href="contact.html" class="active">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <section id="contact" style="padding-top: 120px;">
+        <h2 class="section-title">Skontaktuj się z Nami</h2>
+        <div class="contact-container">
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Imię i Nazwisko</label>
+                    <input type="text" id="name" name="name" required placeholder="Twoje imię">
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required placeholder="twoj@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Temat Wiadomości</label>
+                    <select id="subject" name="subject">
+                        <option value="general">Pytanie ogólne</option>
+                        <option value="collaboration">Współpraca</option>
+                        <option value="feedback">Opinia o stronie</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Wiadomość</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Treść wiadomości..."></textarea>
+                </div>
+                <button type="submit" class="btn" style="width: 100%; border: none; cursor: pointer;">Wyślij</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Maciej Klepacki</p>
+        <div id="clock" style="margin-top: 10px; font-size: 0.9rem; color: var(--accent-color);"></div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

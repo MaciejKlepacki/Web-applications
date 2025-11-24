@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Narciarstwo Alpejskie | Galeria</title>
+    <meta
+      name="description"
+      content="Galeria zdjęć i wideo z najpiękniejszych stoków narciarskich."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo"><a href="index.html">AlpineSki</a></div>
+      <div class="menu-toggle" id="mobile-menu">
+        <span>&#9776;</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html" class="active">Galeria</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+      </ul>
+    </nav>
+
+    <section id="gallery" style="padding-top: 120px">
+      <h2 class="section-title">Galeria Zdjęć</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img
+            src="https://images.pexels.com/photos/2433353/pexels-photo-2433353.jpeg?cs=srgb&dl=pexels-melvinwahlin-2433353.jpg&fm=jpg"
+            alt="Narty w puchu"
+            loading="lazy"
+          />
+        </div>
+        <div class="gallery-item">
+          <img
+            src="https://images.pexels.com/photos/416805/pexels-photo-416805.jpeg"
+            alt="Zawody"
+            loading="lazy"
+          />
+        </div>
+        <div class="gallery-item">
+          <img
+            src="https://images.pexels.com/photos/286581/pexels-photo-286581.jpeg"
+            alt="Gondola"
+            loading="lazy"
+          />
+        </div>
+        <div class="gallery-item">
+          <img
+            src="https://images.pexels.com/photos/3600569/pexels-photo-3600569.jpeg"
+            alt="Góry zimą"
+            loading="lazy"
+          />
+        </div>
+        <div class="gallery-item">
+          <img
+            src="https://images.pexels.com/photos/31112554/pexels-photo-31112554.jpeg"
+            alt="Puch"
+            loading="lazy"
+          />
+        </div>
+        <div class="gallery-item">
+          <img
+            src="https://images.pexels.com/photos/869258/pexels-photo-869258.jpeg"
+            alt="Zjazd ze stoku"
+            loading="lazy"
+          />
+        </div>
+        <div class="gallery-item">
+          <img
+            src="https://toptierskiing.com/wp-content/uploads/2020/12/DSC_3005m2_50-1-JPEG.jpg"
+            alt="Carving"
+            loading="lazy"
+          />
+        </div>
+        <div class="gallery-item">
+          <img
+            src="https://www.powder.com/.image/w_3840,q_auto:good,c_limit/MjEzMDcwMTQzOTEwMDYxNjk2/gettyimages-2200779837.jpg?arena_f_auto"
+            alt="slalom"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <h2 class="section-title" style="margin-top: 4rem">
+        Przejazd Mikaeli Schiffrin w slalomie w Gurgl
+      </h2>
+      <div
+        style="
+          max-width: 800px;
+          margin: 0 auto;
+          border-radius: 15px;
+          overflow: hidden;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        "
+      >
+        <video width="100%" controls>
+          <source src="mikaelaShiffrin.mp4" type="video/mp4" />
+          Twój przeglądarka nie obsługuje elementu wideo.
+        </video>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Maciej Klepacki</p>
+      <div
+        id="clock"
+        style="margin-top: 10px; font-size: 0.9rem; color: var(--accent-color)"
+      ></div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
