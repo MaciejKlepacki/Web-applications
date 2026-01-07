@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Flappy Bird - Zadanie Domowe</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: "Arial", sans-serif;
+        overflow: hidden;
+      }
+
+      #game-container {
+        position: relative;
+      }
+
+      canvas {
+        display: block;
+        background-color: #70c5ce;
+        border: 2px solid #000;
+      }
+
+      /* Stylizacja nakładek UI (Start / Game Over) */
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        pointer-events: none;
+      }
+
+      .hidden {
+        display: none !important;
+      }
+
+      #start-screen h1 {
+        font-size: 40px;
+        color: white;
+        text-shadow: 2px 2px 0 #000;
+        margin: 0;
+      }
+      #start-screen p {
+        font-size: 20px;
+        color: white;
+        text-shadow: 1px 1px 0 #000;
+      }
+
+      #game-over-screen {
+        background-color: rgba(0, 0, 0, 0.7);
+        pointer-events: auto;
+      }
+
+      #score-board {
+        background: #ded895;
+        border: 2px solid #543847;
+        padding: 20px;
+        text-align: center;
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 20px;
+        cursor: pointer;
+        background: #e45c10;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        border: 2px solid white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="game-container">
+      <canvas id="birdCanvas" width="320" height="480"></canvas>
+
+      <div id="start-screen" class="overlay">
+        <h1>Get Ready</h1>
+        <p>Naciśnij SPACJĘ</p>
+      </div>
+
+      <div id="game-over-screen" class="overlay hidden">
+        <h1
+          style="color: #e45c10; font-size: 50px; text-shadow: 2px 2px 0 #fff"
+        >
+          GAME OVER
+        </h1>
+        <div id="score-board">
+          <p>WYNIK: <span id="current-score">0</span></p>
+          <p>NAJLEPSZY: <span id="best-score">0</span></p>
+        </div>
+        <button id="restart-btn">Zagraj ponownie</button>
+      </div>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
