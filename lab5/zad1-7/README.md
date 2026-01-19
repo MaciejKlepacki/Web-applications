@@ -1,73 +1,32 @@
-# React + TypeScript + Vite
+# WdAI Lab 05 - Podstawy React (Zadania 1-7)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projekt zawiera rozwiązania zadań laboratoryjnych nr 5 z przedmiotu WdAI, obejmujące zadania od 1 do 7. Aplikacja została stworzona przy użyciu **Vite + React + TypeScript**.
 
-Currently, two official plugins are available:
+## 📂 Struktura Katalogów
+Rozwiązania znajdują się w folderze `src/components`, podzielone tematycznie:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* **koszyk/** (Zadanie 1)
+    * `Koszyk.tsx`, `Produkt.tsx`, `NowyKoszyk.tsx` - Komponenty i renderowanie list.
+* **liczniki/** (Zadanie 2)
+    * `Licznik.tsx`, `NowyLicznik.tsx`, `Przycisk.tsx` - Zarządzanie stanem (`useState`) i przekazywanie funkcji przez props.
+* **formularze/** (Zadanie 3)
+    * `Formularz.tsx`, `Haslo.tsx`, `Logowanie.tsx` - Obsługa inputów i walidacja danych.
+* **inne/** (Zadanie 4)
+    * `Ternary.tsx` - Warunkowe renderowanie.
+    * `Aktualizacja.tsx` - Aktualizacja stanu obiektu (Spread Operator).
+* **studenci/** (Zadanie 5)
+    * `Studenci.tsx`, `StudentManager.tsx`, `Dodawanie.tsx` - Tabele, interfejsy TypeScript i komunikacja dziecko-rodzic.
+* **efekty/** (Zadanie 6)
+    * `Licznik.tsx` (z efektem), `Tytul.tsx`, `Odliczanie.tsx` - Wykorzystanie `useEffect` i `setInterval`.
+* **produkty/** (Zadanie 7)
+    * `Komentarz.tsx`, `Komentarze.tsx` - Pobieranie danych z API (`fetch`) i wyświetlanie JSON.
 
-## React Compiler
+## 🚀 Uruchomienie
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Zainstaluj zależności:
+   ```bash
+   npm install
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+2. Uruchom serwer deweloperski:
+   ```bash
+   npm run dev
