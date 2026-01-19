@@ -1,0 +1,71 @@
+### 1. Zarejestruj użytkownika (Serwis 3)
+POST http://localhost:3003/api/register
+Content-Type: application/json
+
+{
+  "email": "jan@example.com",
+  "password": "moje_tajne_haslo"
+}
+
+### 2. Zaloguj użytkownika (Serwis 3)
+# @name login
+POST http://localhost:3003/api/login
+Content-Type: application/json
+
+{
+  "email": "jan@example.com",
+  "password": "moje_tajne_haslo"
+}
+
+### Zmienna dla tokenu (działa w REST Client po wykonaniu requestu powyżej)
+@authToken = {{login.response.body.token}}
+
+
+### 3. Dodaj książkę (Serwis 1) - Wymaga Tokenu
+POST http://localhost:3001/api/books
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+  "title": "Wiedźmin",
+  "author": "Andrzej Sapkowski",
+  "year": 1993
+}
+
+### 4. Pobierz listę książek (Serwis 1) - Publiczne
+GET http://localhost:3001/api/books
+
+
+### 5. Dodaj zamówienie (Serwis 2) - Wymaga Tokenu i istniejącego ID książki (np. 1)
+POST http://localhost:3002/api/orders
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+  "userId": 1,
+  "bookId": 1,
+  "quantity": 2
+}
+
+### 6. Próba dodania zamówienia na nieistniejącą książkę (błąd 404)
+POST http://localhost:3002/api/orders
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+  "userId": 1,
+  "bookId": 999,
+  "quantity": 1
+}
+
+### 7. Pobierz zamówienia użytkownika (Serwis 2)
+GET http://localhost:3002/api/orders/1
+
+### 8. Aktualizuj zamówienie (Serwis 2)
+PATCH http://localhost:3002/api/orders/1
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+  "quantity": 5
+}
